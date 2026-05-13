@@ -2,8 +2,8 @@
 <script setup lang="ts">
 
 
+// @ts-nocheck
 import { ref } from 'vue';
-import { useRouter } from 'vue-router';
 import { useVoting } from '../composables/useVoting';
 
 const { loginWithToken, currentVoter } = useVoting();

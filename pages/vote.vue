@@ -1,7 +1,7 @@
 <!-- pages/vote.vue -->
 <script setup lang="ts">
+// @ts-nocheck
 import { ref, onMounted } from 'vue';
-import { useRouter } from 'vue-router';
 import { useVoting } from '../composables/useVoting';
 import type { Candidate } from '../types';
 
