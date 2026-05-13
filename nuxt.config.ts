@@ -1,5 +1,16 @@
 // nuxt.config.ts
 export default defineNuxtConfig({
+  app: {
+    head: {
+      title: 'Pemilihan Ketua OSIS dan Wakil Ketua OSIS Peeriode 2026/2027',
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+        // Jika kamu memakai gambar PNG, ubah menjadi:
+        // { rel: 'icon', type: 'image/png', href: '/logo.png' }
+      ]
+    }
+  },
+
   devtools: { enabled: true },
 
   nitro: {
