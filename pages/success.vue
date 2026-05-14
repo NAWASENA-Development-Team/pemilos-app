@@ -1,10 +1,9 @@
 <!-- pages/success.vue -->
 <script setup lang="ts">
-import { useRouter } from 'vue-router';
-const router = useRouter();
+// @ts-nocheck
 
 const backToHome = () => {
-  router.push('/');
+  navigateTo('/');
 };
 </script>
 

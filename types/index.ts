@@ -2,12 +2,12 @@
 
 export interface Candidate {
   id: string;
-  sequence_number: number;
-  chairman_name: string;
-  vice_chairman_name: string;
+  name: string;
+  photo_url: string;
   vision: string;
   mission: string;
-  photo_url: string;
+  position: 'chairman' | 'vice_1' | 'vice_2'; // Kolom baru
+  sequence_number: number;
 }
 
 export interface Voter {
@@ -23,3 +23,5 @@ export interface Vote {
   candidate_id: string;
   created_at: string;
 }
+
+

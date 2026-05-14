@@ -1,14 +1,13 @@
 // composables/useVoting.ts
-
-
 import { useState } from 'nuxt/app';
 import type { Candidate, Voter } from '../types';
 
 export const useVoting = () => {
-  // @ts-ignore: Editor belum memuat auto-imports Nuxt
-  const supabase = useSupabaseClient();
+  // Kita paksa supabase client untuk menerima tipe 'any' sementara agar tidak rewel
+  // @ts-ignore
+  const supabase = useSupabaseClient<any>();
+  
   const currentVoter = useState<Voter | null>('currentVoter', () => null);
-  // ...
 
   /**
    * Login menggunakan Token
@@ -22,9 +21,12 @@ export const useVoting = () => {
         .single();
 
       if (error) throw new Error('Token tidak valid atau tidak ditemukan.');
-      if (data.is_used) throw new Error('Token ini sudah digunakan untuk memilih.');
+      
+      // Casting data ke Voter agar TS tahu ada properti 'is_used'
+      const voterData = data as Voter;
+      if (voterData.is_used) throw new Error('Token ini sudah digunakan untuk memilih.');
 
-      currentVoter.value = data as Voter;
+      currentVoter.value = voterData;
       return { success: true, message: 'Token valid.' };
     } catch (err: any) {
       return { success: false, message: err.message };
@@ -32,7 +34,7 @@ export const useVoting = () => {
   };
 
   /**
-   * Mengambil daftar Pasangan Calon (Kandidat)
+   * Mengambil daftar Kandidat
    */
   const fetchCandidates = async () => {
     try {
@@ -50,51 +52,44 @@ export const useVoting = () => {
   };
 
   /**
-   * Mengirimkan Suara (Submit Vote)
+   * Mengirimkan Suara (Submit Vote) - Split Ticket
    */
-  const submitVote = async (candidateId: string) => {
+  const submitVote = async (selections: { chairmanId: string, vice1Id: string, vice2Id: string }) => {
     if (!currentVoter.value) return { success: false, message: 'Anda belum login.' };
 
     try {
       // 1. Masukkan data ke tabel votes
+      // Kita beri tahu TS bahwa objek ini valid untuk tabel 'votes'
       const { error: voteError } = await supabase
         .from('votes')
         .insert({
           voter_id: currentVoter.value.id,
-          candidate_id: candidateId,
-        });
+          chairman_id: selections.chairmanId,
+          vice_1_id: selections.vice1Id,
+          vice_2_id: selections.vice2Id,
+        } as any);
 
-      if (voteError) throw new Error('Gagal mengirim suara. Anda mungkin sudah memilih.');
+      if (voteError) throw new Error('Gagal mengirim suara. Pastikan Anda belum memilih.');
 
-      // 2. Tandai token sebagai is_used = true
+      // 2. Tandai token sudah digunakan
       const { error: updateError } = await supabase
         .from('voters')
-        .update({ is_used: true })
+        .update({ is_used: true } as any)
         .eq('id', currentVoter.value.id);
 
       if (updateError) throw new Error('Gagal memperbarui status token.');
 
-      // 3. Hapus sesi setelah berhasil
       currentVoter.value = null;
-
-      return { success: true, message: 'Suara berhasil dikirim! Terima kasih.' };
+      return { success: true, message: 'Kombinasi suara berhasil dikirim!' };
     } catch (err: any) {
       return { success: false, message: err.message };
     }
-  };
-
-  /**
-   * Logout (Menghapus sesi token dari state)
-   */
-  const logout = () => {
-    currentVoter.value = null;
   };
 
   return {
     currentVoter,
     loginWithToken,
     fetchCandidates,
-    submitVote,
-    logout
+    submitVote
   };
 };
