@@ -12,7 +12,7 @@ Berikut adalah individu-individu hebat di balik layar berdirinya sistem *e-votin
 | :--- | :--- | :--- |
 | **Maulana Ferdi Irawan** | *Frontend Dev / UI Designer* | [@FerrDxD](https://github.com/FerrDxD) |
 | **Juansyah Akbar** | *Backend Dev / UX Designer* | [@Mndvv](https://github.com/Mndvv) |
-| **Cecillia Natasya Sonthani** | *System Tester / Quality Assurance* | [@natsylya_] |
+| **Cecillia Natasya Sonthani** | *System Tester / Quality Assurance* | [@natsylya_](https://www.instagram.com/natsylya_/) |
 | **Nayra Septri Ramadhiani** | *Project Manager / Ketua Pelaksana Pemilos* | - |
 | **Siti Habibah** | *Pembina OSIS / Penasihat Sistem* | - |
 
