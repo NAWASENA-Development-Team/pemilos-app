@@ -30,6 +30,6 @@ Jika Anda tertarik untuk melihat kode sumber atau membantu memperbaiki *bug*, si
 
 Bagi teman-teman yang telah melakukan *commit* dan *pull request* secara langsung ke repositori ini, wajah kalian akan terpampang di bawah ini secara otomatis!
 
-<a href="https://github.com/username-github-kamu/pemilos-app/graphs/contributors">
+<a href="https://github.com/FerrDxD/pemilos-app/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=username-github-kamu/pemilos-app" alt="Grafik Kontributor GitHub" />
 </a>
