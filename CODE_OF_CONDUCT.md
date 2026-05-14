@@ -26,7 +26,7 @@ Hal-hal berikut ini merupakan pelanggaran serius terhadap kode etik proyek:
 
 Tim inti pengembang (Divisi TIK) dan pengurus OSIS SMAN 2 Jonggol memiliki hak dan kewajiban untuk menegakkan standar perilaku ini. 
 
-Jika terjadi pelanggaran kode etik, baik yang disengaja maupun tidak, hal ini dapat dilaporkan secara rahasia ke email: **[masukkan-email-tik-osis@email.com]**.
+Jika terjadi pelanggaran kode etik, baik yang disengaja maupun tidak, hal ini dapat dilaporkan secara rahasia ke email: **[ferdi@nawasena.site]**.
 
 Tindakan tegas akan diambil bagi siapa saja yang terbukti melanggar, mulai dari pencabutan akses ke repositori/server aplikasi, hingga pelaporan ke pihak pembina OSIS atau sekolah jika pelanggaran menyangkut manipulasi hasil demokrasi.
 
