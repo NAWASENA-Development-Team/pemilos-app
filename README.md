@@ -24,7 +24,7 @@
 
 *(Catatan: Sesuaikan dengan tumpukan teknologi asli yang digunakan)*
 
-- **Frontend:** [React.js](https://reactjs.org/) / [Next.js](https://nextjs.org/)
+- **Frontend:** [Nuxt.js] (https://nuxt.com/) / [Vue.js] (https://vuejs.org/)
 - **Styling:** [Tailwind CSS](https://tailwindcss.com/)
 - **State Management:** [Context API / Zustand / Redux]
 - **Database & Autentikasi:** [Supabase / Firebase]
