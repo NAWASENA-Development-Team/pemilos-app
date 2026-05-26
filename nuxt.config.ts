@@ -35,6 +35,8 @@ export default defineNuxtConfig({
   supabase: {
     // Disable default auth redirect since we use a custom token system
     redirect: false,
+    url: process.env.SUPABASE_URL,
+    key: process.env.SUPABASE_KEY
   },
 
   // Ensure standard TypeScript behavior

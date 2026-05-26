@@ -4451,7 +4451,7 @@ function _expandFromEnv(value) {
 const _inlineRuntimeConfig = {
   "app": {
     "baseURL": "/",
-    "buildId": "4ab09c80-ff1a-44ae-b060-9dea3fd79983",
+    "buildId": "f4e24a7e-9ca0-413d-9330-181b9003eecb",
     "buildAssetsDir": "/_nuxt/",
     "cdnURL": ""
   },
@@ -4481,8 +4481,8 @@ const _inlineRuntimeConfig = {
   },
   "public": {
     "supabase": {
-      "url": "",
-      "key": "",
+      "url": "https://fftjbkxjjhpevffkeayn.supabase.co",
+      "key": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZmdGpia3hqamhwZXZmZmtlYXluIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg1ODI5MzMsImV4cCI6MjA5NDE1ODkzM30.R63BW3lz4vtT0qU2qIAqZihVHWRZBk5Z8mVJwyTihY0",
       "redirect": false,
       "redirectOptions": {
         "login": "/login",
@@ -4492,7 +4492,7 @@ const _inlineRuntimeConfig = {
         "saveRedirectToCookie": false
       },
       "cookieName": "sb",
-      "cookiePrefix": "",
+      "cookiePrefix": "sb-fftjbkxjjhpevffkeayn-auth-token",
       "useSsrCookies": true,
       "cookieOptions": {
         "maxAge": 28800,
