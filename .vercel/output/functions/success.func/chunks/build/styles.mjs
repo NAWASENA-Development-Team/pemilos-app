@@ -1,12 +1,12 @@
 const interopDefault = r => r.default || r || [];
 const styles = {
   "pages/success.vue": () => import('./success-styles.RopDoFVZ.mjs').then(interopDefault),
-  "pages/index.vue": () => import('./index-styles.CXGsOT75.mjs').then(interopDefault),
-  "pages/admin.vue": () => import('./admin-styles.BQ1Je--i.mjs').then(interopDefault),
+  "pages/admin.vue": () => import('./admin-styles.Dol-NqQ4.mjs').then(interopDefault),
   "pages/vote.vue": () => import('./vote-styles.ZlySr-IM.mjs').then(interopDefault),
+  "pages/index.vue": () => import('./index-styles.CXGsOT75.mjs').then(interopDefault),
   "pages/success.vue?vue&type=style&index=0&scoped=385f0c2c&lang.css": () => import('./success-styles.RopDoFVZ.mjs').then(interopDefault),
+  "pages/admin.vue?vue&type=style&index=0&scoped=c995f11a&lang.css": () => import('./admin-styles.Dol-NqQ4.mjs').then(interopDefault),
   "pages/index.vue?vue&type=style&index=0&scoped=c6823989&lang.css": () => import('./index-styles.CXGsOT75.mjs').then(interopDefault),
-  "pages/admin.vue?vue&type=style&index=0&scoped=51f561c7&lang.css": () => import('./admin-styles.BQ1Je--i.mjs').then(interopDefault),
   "pages/vote.vue?vue&type=style&index=0&scoped=757dc9c1&lang.css": () => import('./vote-styles.nKM9akxC.mjs').then(interopDefault),
   "node_modules/nuxt/dist/app/components/error-404.vue": () => import('./error-404-styles.DtuF77Et.mjs').then(interopDefault),
   "node_modules/nuxt/dist/app/components/error-500.vue": () => import('./error-500-styles.3g_bWYX3.mjs').then(interopDefault),
