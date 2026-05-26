@@ -1,0 +1,4 @@
+const VisionMissionModal_vue_vue_type_style_index_0_scoped_f7eff269_lang = ".custom-scrollbar[data-v-f7eff269]::-webkit-scrollbar{width:8px}.custom-scrollbar[data-v-f7eff269]::-webkit-scrollbar-track{background:#fdf4ff;border-left:2px solid #1e1b4b}.custom-scrollbar[data-v-f7eff269]::-webkit-scrollbar-thumb{background:#f472b6;border:2px solid #1e1b4b;border-radius:10px}.custom-scrollbar[data-v-f7eff269]::-webkit-scrollbar-thumb:hover{background:#7c3aed}.modal-bounce-enter-active[data-v-f7eff269]{animation:bounce-in-f7eff269 .5s cubic-bezier(.68,-.55,.265,1.55)}.modal-bounce-leave-active[data-v-f7eff269]{animation:bounce-in-f7eff269 .3s cubic-bezier(.16,1,.3,1) reverse}@keyframes bounce-in-f7eff269{0%{opacity:0;transform:scale(.8) translateY(40px) rotate(-2deg)}to{opacity:1;transform:scale(1) translateY(0) rotate(0)}}";
+
+export { VisionMissionModal_vue_vue_type_style_index_0_scoped_f7eff269_lang as V };
+//# sourceMappingURL=vote-styles-1.mjs-Wn7HX57K.mjs.map

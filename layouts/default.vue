@@ -3,10 +3,15 @@
 </script>
 
 <template>
-  <div class="min-h-screen bg-[#070b14] font-sans text-slate-200 flex flex-col selection:bg-blue-500/30 selection:text-blue-200 overflow-x-hidden">
+  <div class="min-h-screen bg-[#fdf4ff] font-sans text-brand-dark flex flex-col selection:bg-brand-pink/30 selection:text-brand-primary overflow-x-hidden relative">
     
-    <div class="fixed top-[-10%] left-[-10%] w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none z-0"></div>
-    <div class="fixed bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-indigo-600/10 rounded-full blur-[120px] pointer-events-none z-0"></div>
+    <!-- Playful Background Blobs -->
+    <div class="fixed top-[-5%] left-[-10%] w-[600px] h-[600px] bg-brand-cyan/20 rounded-full blur-[100px] pointer-events-none z-0 mix-blend-multiply animate-pulse" style="animation-duration: 8s;"></div>
+    <div class="fixed top-[20%] right-[-5%] w-[400px] h-[400px] bg-brand-pink/20 rounded-full blur-[80px] pointer-events-none z-0 mix-blend-multiply animate-pulse" style="animation-duration: 10s;"></div>
+    <div class="fixed bottom-[-10%] left-[20%] w-[500px] h-[500px] bg-brand-accent/30 rounded-full blur-[100px] pointer-events-none z-0 mix-blend-multiply animate-pulse" style="animation-duration: 12s;"></div>
+
+    <!-- Wavy pattern overlay for extra playfulness -->
+    <div class="fixed inset-0 opacity-[0.03] pointer-events-none z-0" style="background-image: radial-gradient(circle at 2px 2px, #7c3aed 1px, transparent 0); background-size: 32px 32px;"></div>
 
     <Navbar />
     

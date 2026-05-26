@@ -20,13 +20,14 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxtjs/supabase',
-    'nuxt-icon',
+    '@nuxt/icon',
     '@nuxtjs/google-fonts'
   ],
 
   googleFonts: {
     families: {
       'Plus+Jakarta+Sans': [400, 500, 600, 700],
+      'Fredoka': [400, 500, 600, 700],
     },
     display: 'swap',
   },

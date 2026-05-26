@@ -38,35 +38,32 @@ const handleLogin = async () => {
 <template>
   <div class="relative min-h-[80vh] flex flex-col items-center justify-center py-12 px-4 overflow-hidden">
     
-    <div class="text-center mb-12 space-y-6 z-10 animate-fade-in">
-      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 backdrop-blur-md">
-        <span class="relative flex h-3 w-3">
-          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-          <span class="relative inline-flex rounded-full h-3 w-3 bg-blue-500"></span>
-        </span>
-        <span class="text-blue-400 text-[10px] font-black uppercase tracking-[0.3em]">Encrypted Access Point</span>
+    <div class="text-center mb-12 space-y-6 z-10 animate-bounce-in">
+      <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white border-2 border-brand-primary shadow-brutal-sm transform hover:-rotate-2 transition-transform duration-300">
+        <span class="text-2xl animate-pulse">🎉</span>
+        <span class="text-brand-primary text-xs font-bold uppercase tracking-widest font-display">Pesta Demokrasi Dimulai!</span>
       </div>
 
-      <h1 class="text-5xl md:text-7xl font-black text-white tracking-tighter leading-[1.1]">
-        Setiap Era <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500">Memiliki </span> <br> Pemimpinnya
+      <h1 class="text-5xl md:text-7xl font-black font-display text-brand-dark tracking-tight leading-[1.1]">
+        Suaramu, <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-pink via-brand-primary to-brand-cyan">Masa Depan Kita!</span> 🌟
       </h1>
       
-      <p class="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto font-medium leading-relaxed italic">
-        "Suara integritasmu hari ini, menentukan arah sekolah esok hari."
+      <p class="text-brand-primary text-lg md:text-2xl max-w-2xl mx-auto font-medium leading-relaxed font-display">
+        "Yuk, pilih pemimpin kece untuk sekolah kita yang lebih baik!" 🚀
       </p>
     </div>
 
     <div class="w-full max-w-md relative group z-10">
-      <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-[3rem] blur-2xl opacity-20 group-hover:opacity-40 transition duration-1000"></div>
       
-      <div class="relative bg-white/5 backdrop-blur-[20px] border border-white/10 rounded-[2.5rem] p-8 md:p-10 shadow-2xl flex flex-col items-center">
+      <!-- Playful Form Container -->
+      <div class="relative bg-white border-4 border-brand-dark rounded-[2rem] p-8 md:p-10 shadow-brutal-lg flex flex-col items-center transition-transform hover:-translate-y-2 hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] duration-300">
         
-        <div class="mb-8 p-4 bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-3xl border border-white/10 shadow-inner">
-          <Icon name="heroicons:shield-check-solid" class="text-5xl text-blue-400 shadow-blue-500/50" />
+        <div class="mb-6 p-4 bg-brand-accent rounded-full border-4 border-brand-dark shadow-brutal-sm transform -rotate-6 group-hover:rotate-12 transition-transform duration-500">
+          <Icon name="heroicons:ticket-solid" class="text-5xl text-brand-dark" />
         </div>
 
-        <h2 class="text-2xl font-bold text-white mb-2">Verifikasi Pemilih</h2>
-        <p class="text-sm text-slate-500 mb-8 text-center font-medium">Masukkan token 8-digit Anda untuk memulai voting.</p>
+        <h2 class="text-3xl font-black font-display text-brand-dark mb-2 text-center">Tiket Masuk 🎟️</h2>
+        <p class="text-base text-brand-primary mb-8 text-center font-bold">Masukkan token rahasiamu di bawah ini ya!</p>
 
         <form @submit.prevent="handleLogin" class="w-full space-y-6">
           <div class="relative group/input">
@@ -74,14 +71,14 @@ const handleLogin = async () => {
               v-model="tokenInput" 
               type="text" 
               placeholder="PM-XXXX-XX" 
-              class="w-full bg-black/20 px-6 py-5 rounded-2xl border-2 border-white/5 focus:border-blue-500/40 focus:ring-8 focus:ring-blue-500/5 outline-none transition-all font-mono text-center text-2xl uppercase tracking-[0.3em] text-white placeholder:text-slate-700 placeholder:tracking-normal group-hover/input:border-white/10"
+              class="w-full bg-brand-light px-6 py-5 rounded-2xl border-4 border-brand-primary focus:border-brand-pink focus:outline-none focus:ring-4 focus:ring-brand-pink/30 transition-all font-display font-black text-center text-3xl uppercase tracking-widest text-brand-dark placeholder:text-brand-primary/40 shadow-inner"
               :disabled="isLoading"
             />
           </div>
           
-          <Transition name="slide">
-            <div v-if="errorMessage" class="flex items-center gap-2 text-red-400 text-xs font-bold justify-center bg-red-500/10 py-3 rounded-xl border border-red-500/20">
-              <Icon name="heroicons:exclamation-circle-solid" />
+          <Transition name="bounce">
+            <div v-if="errorMessage" class="flex items-center gap-2 text-white text-sm font-bold justify-center bg-red-500 py-3 rounded-xl border-4 border-brand-dark shadow-brutal-sm">
+              <Icon name="heroicons:face-frown-solid" class="text-xl" />
               {{ errorMessage }}
             </div>
           </Transition>
@@ -89,14 +86,13 @@ const handleLogin = async () => {
           <button 
             type="submit" 
             :disabled="isLoading"
-            class="w-full group relative overflow-hidden bg-white text-[#070b14] font-black text-lg py-5 rounded-2xl shadow-[0_20px_40px_-10px_rgba(255,255,255,0.1)] hover:shadow-white/20 transition-all active:scale-[0.97] disabled:opacity-50"
+            class="w-full relative overflow-hidden bg-brand-pink text-white border-4 border-brand-dark font-black font-display text-xl py-5 rounded-2xl shadow-brutal-sm hover:shadow-brutal transition-all active:translate-y-1 active:shadow-none disabled:opacity-50 disabled:cursor-not-allowed group/btn"
           >
-            <div class="absolute inset-0 bg-gradient-to-r from-blue-100 to-indigo-100 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <div class="absolute inset-0 bg-white/20 translate-y-full group-hover/btn:translate-y-0 transition-transform duration-300"></div>
             
             <div class="relative flex items-center justify-center gap-3">
-              <Icon v-if="isLoading" name="svg-spinners:180-ring-with-bg" class="text-2xl" />
-              <span v-else>Masuk ke Bilik Suara</span>
-              <Icon v-if="!isLoading" name="heroicons:arrow-right-circle-solid" class="text-2xl group-hover:translate-x-1 transition-transform" />
+              <Icon v-if="isLoading" name="svg-spinners:180-ring-with-bg" class="text-3xl" />
+              <span v-else>Gas Memilih! 🚀</span>
             </div>
           </button>
         </form>
@@ -106,20 +102,24 @@ const handleLogin = async () => {
 </template>
 
 <style scoped>
-.animate-fade-in {
-  animation: fadeIn 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+.animate-bounce-in {
+  animation: bounceIn 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(40px); }
-  to { opacity: 1; transform: translateY(0); }
+@keyframes bounceIn {
+  0% { opacity: 0; transform: scale(0.8) translateY(40px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
 }
 
-.slide-enter-active, .slide-leave-active {
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+.bounce-enter-active {
+  animation: bounce-in 0.5s;
 }
-.slide-enter-from, .slide-leave-to {
-  opacity: 0;
-  transform: scale(0.9) translateY(-10px);
+.bounce-leave-active {
+  animation: bounce-in 0.5s reverse;
+}
+@keyframes bounce-in {
+  0% { transform: scale(0); opacity: 0; }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); opacity: 1; }
 }
 </style>

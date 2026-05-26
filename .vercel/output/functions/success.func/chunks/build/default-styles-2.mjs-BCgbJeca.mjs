@@ -1,0 +1,4 @@
+const Footer_vue_vue_type_style_index_0_scoped_f50486d5_lang = ".bounce-enter-active[data-v-f50486d5]{animation:bounce-in-f50486d5 .5s}.bounce-leave-active[data-v-f50486d5]{animation:bounce-in-f50486d5 .5s reverse}@keyframes bounce-in-f50486d5{0%{opacity:0;transform:scale(0)}50%{transform:scale(1.05)}to{opacity:1;transform:scale(1)}}.custom-scrollbar[data-v-f50486d5]::-webkit-scrollbar{width:8px}.custom-scrollbar[data-v-f50486d5]::-webkit-scrollbar-track{background:#fdf4ff;border:1px solid #1e1b4b;border-radius:10px}.custom-scrollbar[data-v-f50486d5]::-webkit-scrollbar-thumb{background:#7c3aed;border:1px solid #1e1b4b;border-radius:10px}.custom-scrollbar[data-v-f50486d5]::-webkit-scrollbar-thumb:hover{background:#f472b6}";
+
+export { Footer_vue_vue_type_style_index_0_scoped_f50486d5_lang as F };
+//# sourceMappingURL=default-styles-2.mjs-BCgbJeca.mjs.map
